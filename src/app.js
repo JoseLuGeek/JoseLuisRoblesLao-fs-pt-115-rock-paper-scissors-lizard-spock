@@ -8,11 +8,11 @@ const weapon = ["rock", "paper", "scissors", "lizard", "spock"]
 const checkWeaponGuess = (userGuest) => {
   const computerWeapon = getRandomWeapon()
 
-  console.log(`You chose: ${userGuest}`);
+  console.log(`Tu eleccion: ${userGuest}`);
   console.log(`Computer weapon: ${computerWeapon}`);
 
   if (userGuest === computerWeapon) {
-    console.log("Take it serious! It's a draw...");
+    console.log("Esto es un empate");
   } else if (
     (userGuest === "rock" && (computerWeapon === "scissors" || computerWeapon === "lizard")) ||
     (userGuest === "paper" && (computerWeapon === "rock" || computerWeapon === "spock")) ||
@@ -20,12 +20,12 @@ const checkWeaponGuess = (userGuest) => {
     (userGuest === "lizard" && (computerWeapon === "paper" || computerWeapon === "spock")) ||
     (userGuest === "spock" && (computerWeapon === "scissors" || computerWeapon === "rock"))
   ) {
-    console.log("Hmm... you win. Again!");
+    console.log("Tu Ganas!");
   } else {
-    console.log("Bazinga! You loose!");
+    console.log("Tu Pierdes!");
   }
 }
 
-const guess = prompt("Choose your weapon: rock, paper, scissors, lizard, spock").toLowerCase();
+const guess = prompt("Es hora de elegir: rock, paper, scissors, lizard, spock").toLowerCase();
 
 checkWeaponGuess(guess)
